@@ -1,5 +1,16 @@
 import { Component } from '@angular/core';
 
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+
+
+export class AppComponent {
+  title = 'Book Database';
+  books = BOOKS;    
+}
 
 export class books {
   title: string;
@@ -46,16 +57,3 @@ const BOOKS: books[] = [
     cover: "https://spark.adobe.com/images/landing/examples/how-to-book-cover.jpg",
   }
 ];
-
-
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
-})
-
-
-export class AppComponent {
-  title = 'Book Database';
-  books = BOOKS;    
-}
