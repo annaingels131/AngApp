@@ -1,20 +1,4 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{title}}
-  </h1>
-</div>
-<div class="container">
-  <ul class="books row">
-    <h1>Featured Books:</h1>
-    <li *ngFor="let book of books">
-      <div class="col-xs-6 col-md-3">
-        <img src="{{book.cover}}" class=" img-responsive">
-        <h5>{{book.title}}</h5> 
-        <h5>{{book.author}}</h5>
-      </div>
-    </li>
-  </ul>
-</div>
+<topOfPage></topOfPage>
+<router-outlet></router-outlet>
 
 
