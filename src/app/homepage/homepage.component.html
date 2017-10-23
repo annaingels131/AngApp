@@ -1,0 +1,8 @@
+<h1 class="featured"> Featured Books: </h1>  
+<ul class="books">
+    <li *ngFor="let book of books">
+    <div class="books col-sm-4"> 
+        <img src="{{book.cover}}" class="img-responsive" [routerLink]="['/details', book.title]">
+    </div>
+    </li>
+</ul>

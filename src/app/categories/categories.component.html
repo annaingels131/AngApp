@@ -1,0 +1,16 @@
+<div class="container">
+  <h1 class="row">Romance</h1>
+  <li *ngFor="let book of books">
+      <div class="books"> 
+        <img src="{{book.cover}}" class="img-responsive col-xs-2" [routerLink]="['/details', book.title]">
+      </div>
+  </li>
+</div>
+<div class="container">
+    <h1 class="row">Comedy</h1>
+    <li *ngFor="let book of books">
+        <div class="books"> 
+            <img src="{{book.cover}}" class="img-responsive col-xs-2">
+        </div>
+    </li>
+  </div>
