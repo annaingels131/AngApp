@@ -1,26 +1,38 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { allBooks } from '../books';
+import { booksService } from '../book.service'
+import { BOOKS }  from '../bookObj';
+
+import { DetailsComponent } from '../details/details.component';
 
 
 @Component({
   selector: 'homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css'],
-  providers: [allBooks],
+  providers: [booksService],
 })
 export class HomepageComponent implements OnInit {
-  
-  public library:Array<Object>;
-  
- 
-  constructor(_all: allBooks) {
-    this.library = _all.getBooks();
+  books: allBooks[] =[];
+
+  constructor(
+    private bookService: booksService,
+    private router: Router,
+  ) {
+
   }
 
-
-
-
-  ngOnInit() {
+  getBooks(): void {
+    this.bookService.getBooks().then(books => this.books = books)
   }
+
+  
+  ngOnInit(): void {
+    this.getBooks();
+  }
+
+  
 
 }

@@ -5,12 +5,12 @@
   <div style="text-align:center">
     <ul>
       <li><a routerLink="/">Home</a></li>
-      <li><a href="/categories">Categories</a></li>
+      <li><a routerLink="/categories">Categories</a></li>
       <button class="btn" (click) = "display = !display">Search</button>
     </ul>
     <div *ngIf="display" class="searching">
-      <input type="text" placeholder="Search" class="serachbar">
-      <button class="btn">Search</button>                     
+      <input type="text" placeholder="Search" class="serachbar" [(ngModel)]="query">
+      <button class="btn" (click)="GetBooks()">Search</button>                     
     </div> 
   </div> 
 </div>

@@ -6,7 +6,10 @@ import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { RoutingModule } from './app.routes';
 import { HeadComponent } from './head/head.component';
-import { CategoriesComponent } from './categories/categories.component'
+import { CategoriesComponent } from './categories/categories.component';
+import { DetailsComponent } from './details/details.component';
+
+import { booksService } from './book.service';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,7 @@ import { CategoriesComponent } from './categories/categories.component'
     HomepageComponent,
     HeadComponent,
     CategoriesComponent,
+    DetailsComponent,
     
   ],
   imports: [
@@ -21,7 +25,7 @@ import { CategoriesComponent } from './categories/categories.component'
     FormsModule,
     RoutingModule
   ],
-  providers: [],
+  providers: [booksService],
   bootstrap: [AppComponent],
   
 })

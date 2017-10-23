@@ -10,7 +10,6 @@ import { allBooks } from './books';
 
 
 export class AppComponent {
-  constructor() { }
   
 }
 

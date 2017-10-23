@@ -1,23 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { allBooks } from '../books';
+import { booksService } from '../book.service';
+import { BOOKS } from '../bookObj';
 
 @Component({
   selector: 'categories',
   templateUrl: './categories.component.html',
   styleUrls: ['./categories.component.css'],
-  providers: [allBooks]
+  providers: [booksService],
+  
 })
 export class CategoriesComponent implements OnInit {
-
-  public library:Array<Object>;
+  books: allBooks[] =[];
   
- 
-  constructor(_all: allBooks) {
-    this.library = _all.getBooks();
+constructor (    
+  private bookService: booksService,
+){}
+
+  getBooks(): void {
+    this.bookService.getBooks().then(books => this.books = books)
   }
 
-
-  ngOnInit() {
+  
+  ngOnInit(): void {
+    this.getBooks();
   }
-
 }
