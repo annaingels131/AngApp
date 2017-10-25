@@ -1,0 +1,22 @@
+.search {
+    text-align: center;
+    border-radius: 20px;
+    height: 50px;
+    width: 300px;
+    margin: 20px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.magglass{
+    height: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-height: 200px;
+    margin: 0 20px;
+}

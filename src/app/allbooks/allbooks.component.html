@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="row">
+    <img src="https://www.oswego.edu/oswego-search/img/search.png" alt="search" class="magglass">
+    <input type="text" class="search" placeholder="search">
+    <ul class="library">
+        <li *ngFor="let book of books">
+        <a [routerLink]="['/details', book.title]">
+          <div class="books col-xs-6 col-md-3" [style.background-image]="'url(' + book.cover + ')'" [ngStyle]="{  'background-size': 'cover','background-repeat': 'no-repeat', 'height': '400px'} ">
+          </div>
+        </a>
+        </li>
+    </ul>
+  </div>
+</div>

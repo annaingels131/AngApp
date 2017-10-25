@@ -1,16 +1,46 @@
 <div class="container">
-  <h1 class="row">Romance</h1>
-  <li *ngFor="let book of books">
-      <div class="books"> 
-        <img src="{{book.cover}}" class="img-responsive col-xs-2" [routerLink]="['/details', book.title]">
-      </div>
-  </li>
-</div>
-<div class="container">
-    <h1 class="row">Comedy</h1>
+    <h1 class="row">Romance</h1>
     <li *ngFor="let book of books">
-        <div class="books"> 
-            <img src="{{book.cover}}" class="img-responsive col-xs-2">
+        <div *ngIf="book.category.indexOf('romance')>-1">        
+            <a [routerLink]="['/details', book.title]">      
+                <div class="books col-xs-3 col-md-2" [style.background-image]="'url(' + book.cover + ')'" > 
+                </div> 
+            </a>
         </div>
     </li>
-  </div>
+</div>
+<div class="container">
+    <h1 class="row">Art</h1>
+    <li *ngFor="let book of books">
+        <div *ngIf="book.category.indexOf('art')>-1">  
+            <a [routerLink]="['/details', book.title]">      
+                <div class="books col-xs-3 col-md-2" [style.background-image]="'url(' + book.cover + ')'" > 
+                </div> 
+            </a>
+        </div>
+         </li>
+</div>
+<div class="container">
+    <h1 class="row">Classics</h1>
+    <li *ngFor="let book of books">
+        <div *ngIf="book.category.indexOf('classic')>-1">                
+            <a [routerLink]="['/details', book.title]">      
+                <div class="books col-xs-3 col-md-2" [style.background-image]="'url(' + book.cover + ')'" > 
+                </div> 
+            </a>
+        </div>
+    </li>
+</div>
+<div class="container">
+        <h1 class="row">Comedy</h1>
+        <li *ngFor="let book of books">
+            <div *ngIf="book.category.indexOf('comedy')>-1">                
+                <a [routerLink]="['/details', book.title]">      
+                    <div class="books col-xs-3 col-md-2" [style.background-image]="'url(' + book.cover + ')'" > 
+                    </div> 
+                </a>
+            </div>
+        </li>
+    </div>
+        
+    

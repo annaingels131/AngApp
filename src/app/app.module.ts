@@ -11,6 +11,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { DetailsComponent } from './details/details.component';
 
 import { booksService } from './book.service';
+import { AllbooksComponent } from './allbooks/allbooks.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { booksService } from './book.service';
     CategoriesComponent,
     DetailsComponent,
     SearchFilterPipe,
+    AllbooksComponent,
     
   ],
   imports: [

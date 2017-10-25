@@ -25,7 +25,7 @@ export class HomepageComponent implements OnInit {
   }
 
   getBooks(): void {
-    this.bookService.getBooks().then(books => this.books = books)
+    this.bookService.getBooks().then(books => this.books = books.slice(0,6))
   }
 
   
