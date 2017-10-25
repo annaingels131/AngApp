@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
+import {  } from '../homepage'
+
 import { allBooks } from '../books'; 
 import { booksService }  from '../book.service';
 
@@ -12,7 +14,7 @@ import { booksService }  from '../book.service';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-  book: allBooks;
+  public book: allBooks;
 
   constructor(
     private booksService: booksService,

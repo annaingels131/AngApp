@@ -7,7 +7,9 @@ export class allBooks {
     title: string;    
     author: string;
     published: number;
+    category: string;
     cover: string;
+    about: string;
     
   }
 
@@ -16,13 +18,11 @@ export class allBooks {
 // import 'rxjs/add/operator/map';
 
 // @Injectable()
-
 //     export class allBooks {
 //         public query: string;
 //         public queryString: string;
 //         public postList;
-        
-//        // public limit: number; 
+//         public limit: number; 
 
 
 //         constructor (
