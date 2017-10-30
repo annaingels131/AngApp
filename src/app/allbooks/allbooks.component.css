@@ -1,15 +1,23 @@
 .search {
     text-align: center;
-    border-radius: 20px;
-    height: 50px;
-    width: 300px;
-    margin: 20px 20px;
+    border-radius: 15px;
+    height: 40px;
+    margin: 20px 0;
+    width: 100%;
     font-size: 20px;
     position: relative;
 }
 
+
+.books {  
+    background-size: cover;
+    background-repeat: no-repeat; 
+    height: 400px
+} 
+
 .magglass{
-    height: 50px;
+    height: 30px;
+    margin: 0;
 }
 
 li {
@@ -20,3 +28,26 @@ img {
     max-height: 200px;
     margin: 0 20px;
 }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #21bae0;
+  }
+
+  .books:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+      color: #fff;
+      text-align: center;
+      transform: translateY(50%);
+  }
