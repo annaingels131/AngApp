@@ -3,19 +3,21 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
+import {  } from '../homepage'
+
 import { allBooks } from '../books'; 
 import { booksService }  from '../book.service';
 
 @Component({
-  selector: 'details',
+  selector: 'bookdetail',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-  book: allBooks;
+  public book: allBooks;
 
   constructor(
-    private bookService: booksService,
+    private booksService: booksService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
@@ -23,7 +25,7 @@ export class DetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap
-      .switchMap((params: ParamMap) => this.bookService.getBook(params.get('title')))
+      .switchMap((params: ParamMap) => this.booksService.getBook(params.get('title')))
       .subscribe(book => this.book = book);
   }
  

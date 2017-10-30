@@ -1,5 +1,8 @@
 .books {
-    margin: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    margin: 10px;
 }
 
 li {

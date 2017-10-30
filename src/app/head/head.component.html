@@ -6,11 +6,9 @@
     <ul>
       <li><a routerLink="/">Home</a></li>
       <li><a routerLink="/categories">Categories</a></li>
-      <button class="btn" (click) = "display = !display">Search</button>
+      <li><a routerLink="/library">Full Library</a></li>
     </ul>
-    <div *ngIf="display" class="searching">
-      <input type="text" placeholder="Search" class="serachbar" [(ngModel)]="query">
-      <button class="btn" (click)="GetBooks()">Search</button>                     
-    </div> 
+ 
   </div> 
 </div>
+

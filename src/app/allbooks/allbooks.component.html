@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="">
+    <input type="text" class="search col-xs-11" placeholder="search" [(ngModel)]="searchText">
+  </div>
+    <ul class="library">
+        <li *ngFor="let book of books | searchBy: ['title', 'author']:  [searchText]">
+          <a [routerLink]="['/details', book.title]">
+            <div class="books col-xs-6 col-md-3" [style.background-image]="'url(' + book.cover + ')'">
+              <div class="overlay">
+                <div class="text">
+                  <h1>{{book.title}}</h1>
+                  <h4>{{book.author}}</h4>
+                  <h5>Click to see more details</h5>
+                </div>
+              </div>
+            </div>
+          </a>
+        </li>
+    </ul>
+</div>

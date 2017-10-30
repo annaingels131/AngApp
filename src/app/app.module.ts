@@ -9,7 +9,10 @@ import { HeadComponent } from './head/head.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { DetailsComponent } from './details/details.component';
 
+import { SearchByPipe } from './pipes/search-by.pipe';
+
 import { booksService } from './book.service';
+import { AllbooksComponent } from './allbooks/allbooks.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,8 @@ import { booksService } from './book.service';
     HeadComponent,
     CategoriesComponent,
     DetailsComponent,
+    AllbooksComponent,
+    SearchByPipe,
     
   ],
   imports: [
