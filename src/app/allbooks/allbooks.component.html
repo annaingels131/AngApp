@@ -1,8 +1,43 @@
-<div class="container-fluid">
-  <div class="">
-    <input type="text" class="search col-xs-11" placeholder="search" [(ngModel)]="searchText">
+<div class="container">
+  <div class="row">
+    
+      <div class="inner-addon left-addon" ng-submit="searchPosts()">
+          <i class="glyphicon glyphicon-lg glyphicon-search"></i>
+          <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" (keyup.enter)="searchPosts()"/>
+      </div>      
+
+    <!-- <input class="form-control" placeholder="Search" name="subject" type="text" [(ngModel)]="query" class="search">
+      <button (click)="searchPosts()" class="btn btn-lg"><i class="glyphicon glyphicon-search"></i> Search</button> -->
   </div>
-    <ul class="library">
+</div>
+        
+      <!-- <input type="text" class="sarch col-xs-11" placeholder="search" [(ngModel)]="searchText"> -->
+    <div class="container-fluid">
+      <ul class="library">
+            <li *ngFor="let post of postList">
+              <a href="{{post.volumeInfo.previewLink}}" target="blank">
+                <div class="books col-xs-4 col-md-2" [style.background-image]="'url(' + post.volumeInfo.imageLinks.thumbnail + ')'">
+                  <div class="overlay">
+                    <div class="text">
+                      <h4>{{post.volumeInfo.title}}</h4>
+                      <h5>{{post.volumeInfo.authors}}</h5>
+                      <p>Click to see more details</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+        </ul>
+    </div>
+        
+        
+        
+        
+     
+       
+
+  <!-- </div>
+     <ul class="library">
         <li *ngFor="let book of books | searchBy: ['title', 'author']:  [searchText]">
           <a [routerLink]="['/details', book.title]">
             <div class="books col-xs-6 col-md-3" [style.background-image]="'url(' + book.cover + ')'">
@@ -16,5 +51,5 @@
             </div>
           </a>
         </li>
-    </ul>
-</div>
+    </ul> -->
+

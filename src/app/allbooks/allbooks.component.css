@@ -1,33 +1,48 @@
-.search {
-    text-align: center;
-    border-radius: 15px;
-    height: 40px;
-    margin: 20px 0;
+input[type=text] {
     width: 100%;
-    font-size: 20px;
-    position: relative;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    margin: 10px;
+    height: 50px;
 }
 
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 15px 20px;
+  pointer-events: none;
+}
+
+/* align icon */
+.left-addon .glyphicon  { left:  0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+
+input[type=text]:focus {
+    width: 100%;
+}
 
 .books {  
     background-size: cover;
     background-repeat: no-repeat; 
-    height: 400px
+    height: 270px
 } 
-
-.magglass{
-    height: 30px;
-    margin: 0;
-}
 
 li {
     list-style: none;
 }
 
-img {
-    max-height: 200px;
+/* img {
+    height: 200px;
     margin: 0 20px;
-}
+} */
 
 .overlay {
     position: absolute;
@@ -47,7 +62,11 @@ img {
   }
 
   .text {
+      width: 100%;
       color: #fff;
       text-align: center;
       transform: translateY(50%);
-  }
+      overflow-wrap: break-word;
+      padding: 5px;
+    }
+
